@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(ros_babel_fish VERSION 0.9.1)
 
-set(CATKIN_ENABLE_TESTING FALSE)
-
 # If the value doesn't fit, an exception is thrown in any case because that could result in unexpected behavior and can not be ignored lightly
 option(WARN_ON_INCOMPATIBLE_TYPE "If ON a warning is printed if a value message is set or accessed with a type that does not allow casting without loss of information" ON)
 
@@ -154,6 +152,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 ## Testing ##
 #############
 
+set(CATKIN_ENABLE_TESTING OFF)
 if (CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
   find_package(rosapi REQUIRED)
